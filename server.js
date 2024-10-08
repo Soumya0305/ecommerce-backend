@@ -5,6 +5,7 @@ const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/products');
 const imageRoutes = require('./routes/uploadImage');
 const cartRoutes = require('./routes/cart');
+const addressRoutes = require('./routes/address');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -18,6 +19,7 @@ app.use('./api/uploadImage', imageRoutes);
 app.use('/api/cart', cartRoutes)
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/address', addressRoutes);
 app.get('/test', (req, res) => {
     res.json({ message: 'Test route is working!' });
   });
