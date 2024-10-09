@@ -12,7 +12,11 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://cheery-gumption-e73f1f.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // You can specify allowed methods
+  credentials: true, // Enable credentials if needed
+}));\;
 app.use(express.json());
 
 app.use('./api/uploadImage', imageRoutes);
