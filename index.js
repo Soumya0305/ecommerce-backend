@@ -13,7 +13,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: 'https://cheery-gumption-e73f1f.netlify.app',
+  origin: 'https://deluxe-lolly-6bdd20.netlify.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // You can specify allowed methods
   credentials: true, // Enable credentials if needed
 }));
