@@ -13,7 +13,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: 'https://ecomm-6bdd20.netlify.app',
+  origin: ['https://ecomm-6bdd20.netlify.app', 'http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // You can specify allowed methods
   credentials: true, // Enable credentials if needed
 }));
